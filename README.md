@@ -21,7 +21,7 @@ Su hijo Ángel, que es programador, le ha dicho que Mercado Libre tiene una API 
 - [ ] Al clickear un producto debería redirigirnos a la web de Mercado Libre para ese producto.
 
 ## Ejemplo
-[![Ejemplo](./assets/mock.png)](https://raw.githubusercontent.com/goncy/interview-challenges/main/proyectos-live/migrado-libre/assets/mock.png)
+[![Ejemplo](https://raw.githubusercontent.com/goncy/interview-challenges/main/proyectos-live/migrado-libre/assets/mock.png)]()
 > Nota: El diseño es libre, pero debería ser responsive. Dado el tiempo disponible para el ejercicio, no es necesario que sea muy complejo.
 
 ## Disclaimer
