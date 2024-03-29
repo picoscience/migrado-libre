@@ -1,6 +1,7 @@
 import { IModel } from "@/types";
 import { useState } from "react";
 import ListCategories from "./ListCategories";
+import { useRouter } from "next/navigation";
 
 export default function Category({
   categories,
@@ -8,6 +9,7 @@ export default function Category({
   categories: IModel.ValueAvailableFilter[];
 }) {
   const [flag, setFlag] = useState([""]);
+  const router = useRouter();
   const handleClick = (id: string) => {
     const isPresent = flag.includes(id);
     if (isPresent) {
@@ -20,13 +22,20 @@ export default function Category({
     <div>
       {categories.map(({ name, id }) => (
         <>
-          <li
-            key={id}
-            className="cursor-pointer"
-            onClick={() => handleClick(id)}
-          >
-            {name}
-          </li>
+          <div className="flex" key={id}>
+            <span
+              className="text-xl -translate-y-1 mr-1 cursor-pointer"
+              onClick={() => handleClick(id)}
+            >
+              {!flag.includes(id) ? "+" : "-"}
+            </span>
+            <li
+              className="list-none cursor-pointer"
+              onClick={() => router.push(`/${id}`)}
+            >
+              {name}
+            </li>
+          </div>
           {flag.includes(id) && (
             <div className={`ml-5`}>
               <ListCategories category={id} />
